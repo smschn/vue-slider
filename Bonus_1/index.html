@@ -49,8 +49,10 @@
                             </div>
                             <div class="my-thumbnails position-relative">
 
-                                <!-- Aggiunto ciclo per la creazione delle immagini -->
-                                <div v-for="(image, index) in images" v-bind:class=" (currentImage == index)?'active':'' " class="my-thumbnail"> <!-- aggiunto dentro il v-bind: un if costruito con operatore ternario-->
+                                <!-- Aggiunto ciclo per la creazione delle immagini (simile a forEach) -->
+                                <!-- Aggiunto dentro il v-bind: un if costruito con operatore ternario-->
+                                <!-- Bonus_1: aggiunto evento al click: currentImage diventa uguale al valore dell'indice dell'array -->
+                                <div v-for="(image, index) in images" v-bind:class=" (currentImage == index)?'active':'' " class="my-thumbnail" v-on:click=" currentImage = index ">
                                     <img class="img-fluid" v-bind:src="image.url" v-bind:alt="image.title">
                                 </div>
 
