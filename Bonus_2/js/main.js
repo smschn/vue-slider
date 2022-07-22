@@ -60,18 +60,21 @@ const app = new Vue ({
             } else {
                 this.currentImage++;
             }
+        },
+
+        // creo funzione autoplay per andare avanti in automatico
+        autoplay() {
+            this.next();
         }
 
     },
 
-    // quando Vue ha appena trasformato gli elementi nel DOM, recupero il gancio (hook) 'mounted' e scrivo quale codice deve eseguire in questo momento, prima che Vue prosegua
+    // quando Vue ha appena trasformato gli elementi nel DOM, recupero il gancio (hook) 'mounted' e richiamo 'autoplay'
     mounted: function() {
-        setInterval( function() {
-            console.log(`ogni tre secondi appare questo messaggio`);
-        }, 3000);
+        setInterval(this.autoplay,3000);
     }
 
 })
 
-// uso .this per riferirmi alle variabili dell'oggetto su cui sto compiendo l'azione (in questo caso è l'oggetto Vue);
-// senza fare uso di .this non funzionerebbe il codice.
+// uso .this per riferirmi all'oggetto su cui sto compiendo l'azione (in questo caso è l'oggetto Vue).
+// senza fare uso di .this non funzionerebbe questo codice.
