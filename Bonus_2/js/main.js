@@ -62,6 +62,13 @@ const app = new Vue ({
             }
         }
 
+    },
+
+    // quando Vue ha appena trasformato gli elementi nel DOM, recupero il gancio (hook) 'mounted' e scrivo quale codice deve eseguire in questo momento, prima che Vue prosegua
+    mounted: function() {
+        setInterval( function() {
+            console.log(`ogni tre secondi appare questo messaggio`);
+        }, 3000);
     }
 
 })
