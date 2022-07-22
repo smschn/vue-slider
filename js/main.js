@@ -1,4 +1,4 @@
-// inizializzo Vue
+// inizializzo Vue e aggiungo array al suo interno
 const app = new Vue ({
 
     el: '#app',
@@ -6,7 +6,6 @@ const app = new Vue ({
     data: {
 
         images: [
-
             {
                 url: 'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg',
                 title: 'Svezia',
@@ -36,9 +35,10 @@ const app = new Vue ({
                 title: 'Colombia',
                 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
             },
-
         ],
 
+        currentImage: 0, // imposto una variabile che funga da indicatore \ reference per l'immagine mostrata
+
     }
-    
+
 })
