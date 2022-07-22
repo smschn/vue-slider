@@ -64,14 +64,18 @@ const app = new Vue ({
 
         // creo funzione autoplay per andare avanti in automatico
         autoplay() {
-            this.next();
-        }
+           intervalId = setInterval(this.next,1000);
+        },
+
+        resetInterval() {
+           clearInterval(intervalId);
+        },
 
     },
 
     // quando Vue ha appena trasformato gli elementi nel DOM, recupero il gancio (hook) 'mounted' e richiamo 'autoplay'
     mounted: function() {
-        setInterval(this.autoplay,3000);
+        this.autoplay();
     }
 
 })
