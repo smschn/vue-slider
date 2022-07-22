@@ -37,11 +37,11 @@
                         <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel">
                             <div class="my-carousel-images">
                                 
-                                <div class="my-carousel-item active">
-                                    <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Svezia">
+                                <div  class="my-carousel-item active">
+                                    <img class="img-fluid" v-bind:src="images[0].url" v-bind:alt="images[0].title">
                                     <div class="item-description px-3">
-                                        <h2>Svezia</h2>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.</p>
+                                        <h2>{{images[0].title}}</h2>
+                                        <p>{{images[0].description}}</p>
                                     </div>
                                 </div>
 
