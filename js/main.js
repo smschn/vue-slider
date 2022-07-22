@@ -44,16 +44,26 @@ const app = new Vue ({
     // aggiungo funzioni (che vanno inserite in methods) che incrementano o decrementano la variabile
     methods: {
 
-        // funzione per andare indietro
+        // funzione per andare indietro, con ciclo infinito ()
         previous: function() {
-            this.currentImage--;
+            if (this.currentImage == 0) {
+                this.currentImage = this.images.length-1; // uso .this per riferirmi 
+            } else {
+                this.currentImage--;
+            }
         },
 
         // funzione per andare avanti; con sintassi abbreviata
         next() {
-            this.currentImage++; // uso .this per riferirmi al currentImage in data
+            if (this.currentImage == this.images.length-1) {
+                this.currentImage = 0;
+            } else {
+                this.currentImage++; // uso .this per riferirmi al currentImage in data
+            }
         }
 
     }
 
 })
+
+// uso .this per riferirmi alle variabili di questo oggetto su cui sto compiendo l'azione (in questo caso è l'oggetto Vue)
