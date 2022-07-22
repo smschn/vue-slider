@@ -62,11 +62,12 @@ const app = new Vue ({
             }
         },
 
-        // creo funzione autoplay per andare avanti in automatico
+        // Bonus_2: creo funzione autoplay per andare avanti in automatico ogni secondo
         autoplay() {
-           intervalId = setInterval(this.next,1000);
+           intervalId = setInterval(this.next,1000); // uso una variabile globalissima per poter fermare il setInterval da un'altra funzione
         },
 
+        // Bonus_3: creo funzione per resettare il setInterval
         resetInterval() {
            clearInterval(intervalId);
         },
