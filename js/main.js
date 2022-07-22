@@ -39,6 +39,21 @@ const app = new Vue ({
 
         currentImage: 0, // imposto una variabile che funga da indicatore \ reference per l'immagine mostrata
 
+    },
+
+    // aggiungo funzioni (che vanno inserite in methods) che incrementano o decrementano la variabile
+    methods: {
+
+        // funzione per andare indietro
+        previous: function() {
+            this.currentImage--;
+        },
+
+        // funzione per andare avanti; con sintassi abbreviata
+        next() {
+            this.currentImage++; // uso .this per riferirmi al currentImage in data
+        }
+
     }
 
 })
