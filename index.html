@@ -50,7 +50,7 @@
                             <div class="my-thumbnails position-relative">
 
                                 <!-- Aggiunto ciclo per la creazione delle immagini -->
-                                <div v-for="image in images" class="my-thumbnail"> <!-- tolto classe=active -->
+                                <div v-for="(image, index) in images" v-bind:class=" (currentImage == index)?'active':'' " class="my-thumbnail"> <!-- aggiunto dentro il v-bind: un if costruito con operatore ternario-->
                                     <img class="img-fluid" v-bind:src="image.url" v-bind:alt="image.title">
                                 </div>
 

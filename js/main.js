@@ -1,4 +1,4 @@
-// inizializzo Vue e aggiungo array al suo interno
+// inizializzo Vue e aggiungo l'array al suo interno
 const app = new Vue ({
 
     el: '#app',
@@ -66,5 +66,5 @@ const app = new Vue ({
 
 })
 
-// uso .this per riferirmi alle variabili dell'oggetto su cui sto compiendo l'azione (in questo caso è l'oggetto Vue).
-// senza fare uso di .this non funzionerebbe il codice
+// uso .this per riferirmi alle variabili dell'oggetto su cui sto compiendo l'azione (in questo caso è l'oggetto Vue);
+// senza fare uso di .this non funzionerebbe il codice.
