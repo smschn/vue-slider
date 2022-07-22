@@ -17,68 +17,76 @@
     <!-- Custom style -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>JS Array Carousel with Objects</title>
+    <title>Vue Slider: JS Array Carousel with Objects</title>
 
 </head>
 <body>
 
     <main>
-        <div class="container-fluid p-5">
-            <div class="row text-center">
-                <div class="col-12 p-3" id="my-before-carousel">
 
-                </div>
+        <!-- Aggiunto container al cui interno funzionerà Vue -->
+        <div id="app">
 
-                <div class="col-12 p-5">
-                    <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel">
-                        <div class="my-carousel-images">
-                            
-                            <div class="my-carousel-item active">
-                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Svezia">
-                                <div class="item-description px-3">
-                                    <h2>Svezia</h2>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.</p>
+            <div class="container-fluid p-5">
+                <div class="row text-center">
+                    <div class="col-12 p-3" id="my-before-carousel">
+
+                    </div>
+
+                    <div class="col-12 p-5">
+                        <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel">
+                            <div class="my-carousel-images">
+                                
+                                <div class="my-carousel-item active">
+                                    <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Svezia">
+                                    <div class="item-description px-3">
+                                        <h2>Svezia</h2>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.</p>
+                                    </div>
                                 </div>
-                            </div>
 
 
-                        </div>
-                        <div class="my-thumbnails position-relative">
+                            </div>
+                            <div class="my-thumbnails position-relative">
 
-                            <div class="my-thumbnail active">
-                                <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
-                            </div>
-                            <div class="my-thumbnail">
-                                <img class="img-fluid" src="https://static1.evcdn.net/images/reduction/1513757_w-1920_h-1080_q-70_m-crop.jpg" alt="Thumbnail of Perù picture">
-                            </div>
-                            <div class="my-thumbnail">
-                                <img class="img-fluid" src="https://img.itinari.com/pages/images/original/0d3ed180-d22d-48e8-84df-19c4d888b41f-62-crop.jpg?ch=DPR&dpr=2.625&w=1600&s=7ebd4b5a9e045f41b4e0c7c75d298d6c" alt="Thumbnail of Chile picture">
-                            </div>
-                            <div class="my-thumbnail">
-                                <img class="img-fluid" src="https://static1.evcdn.net/images/reduction/1583177_w-1920_h-1080_q-70_m-crop.jpg" alt="Thumbnail of Argentina picture">
-                            </div>
-                            <div class="my-thumbnail">
-                                <img class="img-fluid" src="https://cdn.sanity.io/images/24oxpx4s/prod/ed09eff0362396772ad50ec3bfb728d332eb1c30-3200x2125.jpg?w=1600&h=1063&fit=crop" alt="Thumbnail of Colombia picture">
-                            </div>
+                                <div class="my-thumbnail active">
+                                    <img class="img-fluid" src="http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg" alt="Thumbnail of Svezia picture">
+                                </div>
+                                <div class="my-thumbnail">
+                                    <img class="img-fluid" src="https://static1.evcdn.net/images/reduction/1513757_w-1920_h-1080_q-70_m-crop.jpg" alt="Thumbnail of Perù picture">
+                                </div>
+                                <div class="my-thumbnail">
+                                    <img class="img-fluid" src="https://img.itinari.com/pages/images/original/0d3ed180-d22d-48e8-84df-19c4d888b41f-62-crop.jpg?ch=DPR&dpr=2.625&w=1600&s=7ebd4b5a9e045f41b4e0c7c75d298d6c" alt="Thumbnail of Chile picture">
+                                </div>
+                                <div class="my-thumbnail">
+                                    <img class="img-fluid" src="https://static1.evcdn.net/images/reduction/1583177_w-1920_h-1080_q-70_m-crop.jpg" alt="Thumbnail of Argentina picture">
+                                </div>
+                                <div class="my-thumbnail">
+                                    <img class="img-fluid" src="https://cdn.sanity.io/images/24oxpx4s/prod/ed09eff0362396772ad50ec3bfb728d332eb1c30-3200x2125.jpg?w=1600&h=1063&fit=crop" alt="Thumbnail of Colombia picture">
+                                </div>
 
 
-                            <!-- prev -->
-                            <div class="my-previous position-absolute">
-                                <span class="my-prev-hook"></span>
-                            </div>
-                            <!-- immagini interne -->
-                            <!-- next -->
-                            <div class="my-next position-absolute">
-                                <span class="my-next-hook"></span>
+                                <!-- prev -->
+                                <div class="my-previous position-absolute">
+                                    <span class="my-prev-hook"></span>
+                                </div>
+                                <!-- immagini interne -->
+                                <!-- next -->
+                                <div class="my-next position-absolute">
+                                    <span class="my-next-hook"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
+
         </div>
+
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
