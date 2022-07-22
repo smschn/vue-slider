@@ -37,28 +37,28 @@ const app = new Vue ({
             },
         ],
 
-        currentImage: 0, // imposto una variabile che funga da indicatore \ reference per l'immagine mostrata
+        currentImage: 0 // imposto una variabile che funga da indicatore \ reference per l'immagine mostrata
 
     },
 
-    // aggiungo funzioni (che vanno inserite in methods) che incrementano o decrementano la variabile
+    // aggiungo funzioni (che vanno inserite in 'methods', allo stesso livello di 'data') che incrementano o decrementano la variabile
     methods: {
 
-        // funzione per andare indietro, con ciclo infinito ()
+        // funzione per andare indietro, con ciclo infinito
         previous: function() {
             if (this.currentImage == 0) {
-                this.currentImage = this.images.length-1; // uso .this per riferirmi 
+                this.currentImage = this.images.length-1;
             } else {
                 this.currentImage--;
             }
         },
 
-        // funzione per andare avanti; con sintassi abbreviata
+        // funzione per andare avanti; con sintassi abbreviata e ciclo infinito
         next() {
             if (this.currentImage == this.images.length-1) {
                 this.currentImage = 0;
             } else {
-                this.currentImage++; // uso .this per riferirmi al currentImage in data
+                this.currentImage++;
             }
         }
 
@@ -66,4 +66,5 @@ const app = new Vue ({
 
 })
 
-// uso .this per riferirmi alle variabili di questo oggetto su cui sto compiendo l'azione (in questo caso è l'oggetto Vue)
+// uso .this per riferirmi alle variabili dell'oggetto su cui sto compiendo l'azione (in questo caso è l'oggetto Vue).
+// senza fare uso di .this non funzionerebbe il codice
