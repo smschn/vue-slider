@@ -48,8 +48,9 @@
                             </div>
                             <div class="my-thumbnails position-relative">
 
-                                <div class="my-thumbnail active">
-                                    <img class="img-fluid" v-bind:src="images[0].url" v-bind:alt="images[0].title">
+                                <!-- Aggiunto ciclo per la creazione delle immagini -->
+                                <div v-for="image in images" class="my-thumbnail"> <!-- tolto classe=active -->
+                                    <img class="img-fluid" v-bind:src="image.url" v-bind:alt="image.title">
                                 </div>
 
                                 <!-- prev -->
