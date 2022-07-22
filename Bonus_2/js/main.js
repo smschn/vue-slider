@@ -62,17 +62,24 @@ const app = new Vue ({
             }
         },
 
-        // creo funzione autoplay per andare avanti in automatico
+        // creo funzione autoplay per andare avanti in automatico: uso setInterval richiamando il codice da ripetere (uso la callback, senza parentesi)
         autoplay() {
-            this.next();
+            setInterval(this.next,1000);
         }
 
     },
 
     // quando Vue ha appena trasformato gli elementi nel DOM, recupero il gancio (hook) 'mounted' e richiamo 'autoplay'
     mounted: function() {
-        setInterval(this.autoplay,3000);
+        this.autoplay();
     }
+
+    // scrittura alternativa:
+    /*
+    mounted() {
+        this.autoplay();
+    }
+    */
 
 })
 
