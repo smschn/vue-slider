@@ -37,9 +37,9 @@
                         <div class="my-carousel-container d-flex flex-column px-5" id="my-carousel">
                             <div class="my-carousel-images">
                                 
-                                <!-- Aggiunto riferimenti a quanto contenuto in Vue -->
-                                <!-- Bonus_3: aggiunti sull'img: mouseover (resetta il setInterval) e mouseleave (riprende l'autoplay); usate sintassi diverse per ciascuno dei due -->
-                                <!-- Bonus_4: aggiunti eventi per le frecce della tastiera con keyup -->
+                                <!-- Modificati alcuni attributi in modo tale da ricevere da Vue i dati in maniera dinamica -->
+                                <!-- Bonus_3: aggiunti sull'img: mouseover (resetta il setInterval) e mouseleave (riprende l'autoplay); usato sintassi diverse per ciascuno dei due -->
+                                <!-- Bonus_4: aggiunti sull'img: eventi per le frecce della tastiera con keyup -->
                                 <div class="my-carousel-item active" >
                                     <img class="img-fluid" v-bind:src="images[currentImage].url" v-bind:alt="images[currentImage].title" v-on:keyup.arrow-left="previous" @keyup.arrow-right="next" tabindex="0">
                                     <div class="item-description px-3">
