@@ -62,44 +62,28 @@ const app = new Vue ({
             }
         },
 
-        prova() {
-            console.log('hai premuto enter');
-        },
-
-        prova2() {
-            console.log('hai premuto enter2')
-        },
-
         // Bonus_2: creo funzione autoplay per andare avanti in automatico ogni secondo
-/*         autoplay() {
-           intervalId = setInterval(this.next,1000); // uso una variabile globalissima per poter fermare il setInterval da un'altra funzione
-        }, */
+        /*
+        autoplay() {
+            intervalId = setInterval(this.next,1000); // uso una variabile globalissima per poter fermare il setInterval da un'altra funzione
+        },
+        */
 
         // Bonus_3: creo funzione per resettare il setInterval
-/*         resetInterval() {
-           clearInterval(intervalId);
-        }, */
-
-/*         // Bonus_4: prime prove...
-        moveWithKeyboardArrows() {
-            window.addEventListener("keydown", function(event) {
-                console.log(event);
-                console.log(event.key);
-                if (event.key == 'ArrowLeft') {
-                    console.log('freccia sinistra'); // debug
-                } else if (event.key == 'ArrowRight') {
-                    console.log('freccia destra'); // debug
-                }
-            });
-        } */
+        /*
+        resetInterval() {
+            clearInterval(intervalId);
+        },
+        */
 
     },
 
     // quando Vue ha appena trasformato gli elementi nel DOM, recupero il gancio (hook) 'mounted' e richiamo 'autoplay'
-/*     mounted: function() {
+    /*
+    mounted: function() {
         this.autoplay();
-         this.moveWithKeyboardArrows();
-    } */
+    }
+    */
 
 })
 

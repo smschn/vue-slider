@@ -39,8 +39,9 @@
                                 
                                 <!-- Aggiunto riferimenti a quanto contenuto in Vue -->
                                 <!-- Bonus_3: aggiunti sull'img: mouseover (resetta il setInterval) e mouseleave (riprende l'autoplay); usate sintassi diverse per ciascuno dei due -->
+                                <!-- Bonus_4: aggiunti eventi per le frecce della tastiera con keyup -->
                                 <div class="my-carousel-item active" >
-                                    <img class="img-fluid" v-bind:src="images[currentImage].url" v-bind:alt="images[currentImage].title" v-on:keyup.arrow-left="previous" @keyup.arrow-right="next" tabindex="0" >
+                                    <img class="img-fluid" v-bind:src="images[currentImage].url" v-bind:alt="images[currentImage].title" v-on:keyup.arrow-left="previous" @keyup.arrow-right="next" tabindex="0">
                                     <div class="item-description px-3">
                                         <h2>{{images[currentImage].title}}</h2>
                                         <p>{{images[currentImage].description}}</p>
@@ -58,11 +59,13 @@
                                 </div>
 
                                 <!-- Aggiunto evento al click -->
+                                <!-- Bonus_4: eliminato v-on:click -->
                                 <div class="my-previous position-absolute" >
                                     <span class="my-prev-hook"></span>
                                 </div>
 
                                 <!-- Aggiunto evento al click, usando la sintassi abbreviata -->
+                                <!-- Bonus_4: eliminato v-on:click -->
                                 <div class="my-next position-absolute" >
                                     <span class="my-next-hook"></span>
                                 </div>
