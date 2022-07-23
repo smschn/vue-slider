@@ -72,11 +72,25 @@ const app = new Vue ({
            clearInterval(intervalId);
         },
 
+        // Bonus_4: prime prove...
+        moveWithKeyboardArrows() {
+            window.addEventListener("keydown", function(event) {
+                console.log(event);
+                console.log(event.key);
+                if (event.key == 'ArrowLeft') {
+                    console.log('freccia sinistra'); // debug
+                } else if (event.key == 'ArrowRight') {
+                    console.log('freccia destra'); // debug
+                }
+            });
+        }
+
     },
 
     // quando Vue ha appena trasformato gli elementi nel DOM, recupero il gancio (hook) 'mounted' e richiamo 'autoplay'
     mounted: function() {
         this.autoplay();
+        this.moveWithKeyboardArrows();
     }
 
 })
